@@ -12,7 +12,7 @@
 <body>
     <h1>TIc - tac - TOE </h1>
     <div class = 'gridbox'>
-        <div class = 'griditem' id="box1"><button> Select</button></div>
+        <div class = 'griditem' id="box1"><button id="button1value"> Select</button></div>
         <div class = 'griditem' id="box2"><button> Select</button></div>
         <div class = 'griditem' id="box3"><button> Select</button></div>
         <div class = 'griditem' id="box4"><button> Select</button></div>
@@ -24,7 +24,25 @@
     </div>
 
 
-    <h4 id = "result">Who wins?</h4>
+    <h4 id ="result">Who wins?</h4>
+    <button onclick="location.reload();">New Game</button>
+    <input type="reset" id = "newroundbutton" value="New Round?">
+
+    <div class = "scoreboard">
+    <h2>Scoreboard</h2>
+    <ul> Player 1
+    <li id="player1result"> 0 </li>  
+    </ul>
+    <ul> Player 2
+        <li id = "player2result"> 0 </li>
+        </ul>
+    </div> 
+
+    <div class = "round">
+<h2> Round </h2>
+<h3 id ="roundnumber">1</h3>
+    </div>
+
     <script src="js/jquery-1.7.2.js"></script>
     <script src="js/game.js"></script>
 </body>
