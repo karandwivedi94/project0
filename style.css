@@ -111,7 +111,7 @@ font-size: 100px;
 
 .gameresult{
     position: absolute;
-    margin-top: 270px;
+    margin-top: 50px;
     margin-left: 444px;
     z-index: 9;
 }
@@ -146,13 +146,14 @@ font-size: 100px;
 .gameresult{
     color: red;
     position: absolute;
-    font-size: 50px;
+    font-size: 40px;
     display: show;
     margin-left: 300px;
+    margin-bottom: 250px;
     font-family: 'Press Start 2P', cursive;
     z-index: 10;
     transition: all 0.4s ease 0s;
-}
+    text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px  }
 
 
 .container-name {
