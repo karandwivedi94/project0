@@ -1,6 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Space+Grotesk:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .gridbox {
@@ -10,8 +13,8 @@ body{
     padding: 0px;
   }
   .griditem {
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -26,7 +29,7 @@ body{
     padding: 15px;
     padding-bottom: 1px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #000000;
     /* font-family: 'Karla', sans-serif; */
   font-family: 'Space Grotesk', sans-serif;
   }
@@ -36,16 +39,197 @@ body{
     height: 40%;
     z-index: 9;
     position: absolute;
-    opacity: 0.3;
-    margin-left: 340px;
-    margin-top: 220px;
+    opacity: 0.5;
+    margin-left: 350px;
+    margin-top: 240px;
   }
 
-.container img{
+img{
     max-width: 100%;
+    max-height: 100%;
 }
 
 
-#logo img{
-    width: 1000%;
+.logo{
+    width: 8%;
+    position: absolute;
+    margin-left: 395px;
+    margin-top: 160px;
+    opacity: 0.6;
+    transition: all 0.4s ease 0s;
+    filter: drop-shadow(-40px 10px 4px #ffffff);
+
+  }
+
+  .logo2{
+    width: 8%;
+    position: absolute;
+    margin-left: 890px;
+    margin-top: 150px;
+    opacity: 0.6;
+    transition: all 0.4s ease 0s;
+    filter: drop-shadow(40px 10px 4px #ff3700);
+
+  }
+
+
+  #player1result{
+    position: absolute;
+    margin-bottom: 1000px;
+    margin-top: 40px;
+    margin-left: 10px;
+    z-index: 9;
+    color: #f5f5f5;
+text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         
+#F90, 0px -20px 40px #C33;
+font-size: 100px;
+  font-size: 60px;
+  /* margin: 40px 0; */
+  /* text-align: center; */
+    font-size: 50px;
+    list-style: none;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  #player2result{
+    position: absolute;
+    margin-bottom: 1200px;
+    margin-top: 40px;
+    margin-left: 880px;
+    z-index: 9;
+    color: #f5f5f5;
+text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         
+#F90, 0px -20px 40px #C33;
+font-size: 100px;
+  font-size: 60px;
+  /* margin: 40px 0; */
+  /* text-align: center; */
+    font-size: 50px;
+    list-style: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.gameresult{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 444px;
+    z-index: 9;
+}
+
+.roundandgamebuttons{
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 400px;
+    z-index: 9;
+}
+
+#roundnumber{
+    position: absolute;
+    margin-bottom: 1000px;
+    margin-top: 10px;
+    margin-left: 400px;
+    color: #f5f5f5;
+text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         
+#F90, 0px -20px 40px #C33;
+font-size: 100px;
+  font-size: 60px;
+  /* margin: 40px 0; */
+  /* text-align: center; */
+    font-size: 50px;
+    list-style: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+
+.gameresult{
+    color: red;
+    position: absolute;
+    font-size: 50px;
+    display: show;
+    margin-left: 300px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 10;
+    transition: all 0.4s ease 0s;
+}
+
+
+.container-name {
+    position: absolute;
+    margin-left: 340px;
+    margin-top: 510px;
+  }
+  .container-name1 {
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 510px;
+  }
+
+  .example_b {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 0, 0) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    background: #140000;
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+  }
+  
+  .example_b1 {
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 0, 0) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    background: #140000;
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+  }
+
+  .example_b:hover {
+    text-shadow: 0px 0px 6px rgb(245, 233, 6);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+  }
+
+  .example_b1:hover {
+    text-shadow: 0px 0px 6px rgb(245, 233, 6);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+  }
+  
+
+
+  .ryustance{
+    position: absolute;
+    margin-top: 200px;
+    margin-right: 100px;
+    width: 10%;
+    z-index: 10;
+  }
+  
+  /* .ryuhaduken{
+z-index: 30;  
+float: left;
+margin-left: 40px;
+} */
+
+
+  .kenstance{
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 855px;
+    margin-right: 100px;
+    width: 12%;
+    z-index: 10;
   }

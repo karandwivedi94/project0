@@ -10,10 +10,17 @@
     <title>Document</title>
 </head>
 <body>
+    <div class = "logo">
     <img src="images/street-fighter-logo-font-download-856x484.jpeg" id="logo" alt="">
+</div>
+    <div class = "logo2">
+<img src="images/street-fighter-logo-font-download-856x484.jpeg" id="logo" alt="">
+</div>
+
+    
     <div class = "container">
     
-    <h1>Tic - tac - TOE </h1>
+    <!-- <h1>Tic - tac - TOE </h1> -->
     <div class = 'gridbox'>
         <div class = 'griditem' matrix id="box1"><cell id = "checkbox1"></cell></div>
         <div class = 'griditem' matrix id="box2"><cell id = "checkbox2"></cell></div>
@@ -25,26 +32,44 @@
         <div class = 'griditem' matrix id="box8"><cell id = "checkbox8"></cell></div>
         <div class = 'griditem' matrix id="box9"><cell id = "checkbox9"></cell></div>
     </div>
-<img class ='display' src="images/ryuvskenbackgroundNEW.jpg_large" alt="">
-    <h4 id ="result">Who wins?</h4>
-    <button onclick="location.reload();">New Game</button>
-    <input type="reset" id = "newroundbutton" value="New Round?">
 
-    <div class = "scoreboard">
-    <h2>Scoreboard</h2>
-    <ul> Player 1
+<div class = "scoreboard" class = 'gridbox'>
+    <!-- <h2>Scoreboard</h2> -->
+    <ul> 
     <li id="player1result"> 0 </li>  
     </ul>
-    <ul> Player 2
+    <ul> 
         <li id = "player2result"> 0 </li>
         </ul>
     </div> 
 
     <div class = "round">
-<h2> Round </h2>
-<h3 id ="roundnumber">1</h3>
+        <!-- <h2> Round </h2> -->
+        <h3 id ="roundnumber"> Round 1</h3>
+            </div>
+
+            <div class = "gameresult"><h4 id ="result">WHO WINS</h4></div> 
+            <!-- Set interval? -->
+   <div class = "container-name" > <button class = "example_b" onclick="location.reload();">New Game</button> 
     </div>
+    <div class = "container-name1"><input  class = "example_b1" type="reset" id = "newroundbutton"  value="New Round">
+    </div>
+
+    <!-- <div class = "ryuhaduken"><img src="images/ryuhaduken.gif" alt=""></div> -->
+    <div class = "ryustance"><img src="images/ryustance.gif" alt=""></div>
+    <div class = "kenstance"><img src="images/ken stance.gif" alt=""></div>
+
+
+
+<img class ='display' src="images/ryuvskenbackgroundNEW.jpg_large" alt="">
+
+    
+    
+
+    
 </div>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/06T9H8NBDBxH8B7oBn8Vls?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
     <script src="js/jquery-1.7.2.js"></script>
     <script src="js/game.js"></script>
