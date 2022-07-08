@@ -1,6 +1,8 @@
 var totalClicks = 0;
 $('.logo').hide();
 $('.gameresult').hide();
+
+// Code to output wither White(X) or Red(O) - one click funciton has bugs atm. This function calls smaller functions like gameResult() and drawFunction()
 var allGridItems = document.querySelectorAll('[matrix]');
 allGridItems.forEach(gridItem => {
 gridItem.addEventListener('click',playerClick,{once:false})
@@ -25,7 +27,8 @@ function playerClick (e){
     gameResult();
     drawFunction();
 }
-    var Licks = 0;
+
+// Game Result Function. Alternative DRYer options being worked on in trial.js
     let sum = 0;
 const gameResult = function(){
     sum++;
@@ -36,98 +39,100 @@ const gameResult = function(){
         $('.gameresult').show();
         let yy = console.count ("X Wins")
         displayPlayer1Win();
-    }
+        }
     if ($("#box4").html() === 'X' && $("#box5").html() === 'X' && $("#box6").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box7").html() === 'X' && $("#box8").html() === 'X' && $("#box9").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box1").html() === 'X' && $("#box4").html() === 'X' && $("#box7").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box2").html() === 'X' && $("#box5").html() === 'X' && $("#box8").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box3").html() === 'X' && $("#box6").html() === 'X' && $("#box9").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box1").html() === 'X' && $("#box5").html() === 'X' && $("#box9").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box3").html() === 'X' && $("#box5").html() === 'X' && $("#box7").html() === 'X'){
         $('#result').html(`${x}`);
         $('.gameresult').show(); 
         console.count ("X Wins");
         displayPlayer1Win(); 
-    }
+        }
     if ($("#box1").html() === 'O' && $("#box2").html() === 'O' && $("#box3").html() === 'O'){
         $('#result').html(`${y}`); 
         $('.gameresult').show(); 
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box4").html() === 'O' && $("#box5").html() === 'O' && $("#box6").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box7").html() === 'O' && $("#box8").html() === 'O' && $("#box9").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box1").html() === 'O' && $("#box4").html() === 'O' && $("#box7").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box2").html() === 'O' && $("#box5").html() === 'O' && $("#box8").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box3").html() === 'O' && $("#box6").html() === 'O' && $("#box9").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box1").html() === 'O' && $("#box5").html() === 'O' && $("#box9").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
+        }
     if ($("#box3").html() === 'O' && $("#box5").html() === 'O' && $("#box7").html() === 'O'){
         $('#result').html(`${y}`);
         $('.gameresult').show();  
         console.count ("Y Wins");
         displayPlayer2Win() 
-    }
-};
+        }
+    };
+
+//Function outputting New Round + Show and hide #result
 document.getElementById("newroundbutton").onclick = function() {newRoundFunction()};
 function newRoundFunction() {
     const boxArray = ['box1','box2','box3','box4','box5','box6','box7','box8','box9']
@@ -138,16 +143,22 @@ function newRoundFunction() {
     totalClicks = 0;
     displayRoundNumber();
     $('.gameresult').hide();
-}
+    $('.logo').hide();
+    $('.logo2').show();
+
+    }
+
+    // Draw function, showing and hiding #result
 const drawFunction = function(){
     let x = "Ryu Wins!!"
     let y = "Ken Wins!!"
-    if ( $('#result').html()!==x && $('#result').html()!==y && totalClicks % 9 === 0 ){
+    if ( $('#result').html()!==x && $('#result').html()!==y && $('#result').html()!== "WHO WINS" && totalClicks % 9 === 0 ){
         $('#result').html(`It's a draw`)
         $('.gameresult').show();
     }
-}
-//Appending score
+    }
+
+//Appending score to Scoreboard
 var player1Wins = 0;
 function displayPlayer1Win()
 {
@@ -165,20 +176,4 @@ function displayRoundNumber(){
     numberOfRounds++;
     $('#roundnumber').text(`Round ${numberOfRounds}`)
 }
-
-// Things to build(Importance >>> Least)
-// Complete ReadMe file
-
-// DEPLOY
-// feature freeze
-// testing
-// readme file
-// styling
-// add comments
-// INDENTATION
-// remove /* dead and unused */ code and files
-// easter eggs
-// have a normal person try your project
-// plan your presentation
-
 
