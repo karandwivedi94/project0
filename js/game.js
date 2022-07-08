@@ -132,7 +132,7 @@ const gameResult = function(){
         }
     };
 
-//Function outputting New Round + Show and hide #result
+//Function outputting New Round + Show and hide #result. 
 document.getElementById("newroundbutton").onclick = function() {newRoundFunction()};
 function newRoundFunction() {
     const boxArray = ['box1','box2','box3','box4','box5','box6','box7','box8','box9']
@@ -145,20 +145,20 @@ function newRoundFunction() {
     $('.gameresult').hide();
     $('.logo').hide();
     $('.logo2').show();
-
+    $('#result').html("WHO WINS")
     }
 
     // Draw function, showing and hiding #result
 const drawFunction = function(){
     let x = "Ryu Wins!!"
     let y = "Ken Wins!!"
-    if ( $('#result').html()!==x && $('#result').html()!==y && $('#result').html()=== "WHO WINS" && totalClicks % 9 === 0 ){
+    if ( totalClicks === 9 && $('#result').html()!==x && $('#result').html()!==y && $('#result').html() === "WHO WINS") {
         $('#result').html(`It's a draw`)
         $('.gameresult').show();
     }
     }
 
-//Appending score to Scoreboard
+//Appending score to Scoreboard - The good stuff
 var player1Wins = 0;
 function displayPlayer1Win()
 {
