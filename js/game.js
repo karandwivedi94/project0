@@ -152,7 +152,7 @@ function newRoundFunction() {
 const drawFunction = function(){
     let x = "Ryu Wins!!"
     let y = "Ken Wins!!"
-    if ( $('#result').html()!==x && $('#result').html()!==y && $('#result').html()!== "WHO WINS" && totalClicks % 9 === 0 ){
+    if ( $('#result').html()!==x && $('#result').html()!==y && $('#result').html()=== "WHO WINS" && totalClicks % 9 === 0 ){
         $('#result').html(`It's a draw`)
         $('.gameresult').show();
     }
